@@ -1,6 +1,6 @@
 name: video_duration_native_platform_interface
 description: A common platform interface for the video_duration_native plugin.
-version: 0.2.0+2
+version: 0.2.0+3
 homepage: https://github.com/Ddarkbooked/video_duration_native
 repository: https://github.com/Ddarkbooked/video_duration_native
 issue_tracker: https://github.com/Ddarkbooked/video_duration_native/issues
