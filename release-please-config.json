@@ -1,0 +1,25 @@
+{
+  "packages": {
+    "video_duration_native": {
+      "release-type": "dart",
+      "package-name": "video_duration_native",
+      "version-file": "video_duration_native/pubspec.yaml"
+    },
+    "video_duration_native_platform_interface": {
+      "release-type": "dart",
+      "package-name": "video_duration_native_platform_interface",
+      "version-file": "video_duration_native_platform_interface/pubspec.yaml"
+    },
+    "video_duration_native_android": {
+      "release-type": "dart",
+      "package-name": "video_duration_native_android",
+      "version-file": "video_duration_native_android/pubspec.yaml"
+    },
+    "video_duration_native_ios": {
+      "release-type": "dart",
+      "package-name": "video_duration_native_ios",
+      "version-file": "video_duration_native_ios/pubspec.yaml"
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}

@@ -1,0 +1,25 @@
+name: video_duration_native_android
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/video_duration_native_android.yaml"
+      - "video_duration_native_android/**"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/video_duration_native_android.yaml"
+      - "video_duration_native_android/**"
+
+jobs:
+  build:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
+    with:
+      flutter_version: 3.35.0
+      working_directory: video_duration_native_android
+

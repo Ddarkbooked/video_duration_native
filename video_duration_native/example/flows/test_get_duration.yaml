@@ -1,0 +1,11 @@
+description: Test getDuration calls native API and displays result
+---
+# This test verifies that:
+# 1. getDuration method calls the native platform code
+# 2. The result is properly displayed in the UI
+# 
+# Note: For invalid paths, native code returns Duration.zero
+# For real video testing with file picker, run the app manually
+- pressOn: "get_duration_button"
+- checkDuration:
+

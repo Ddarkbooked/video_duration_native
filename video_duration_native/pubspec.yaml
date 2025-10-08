@@ -1,0 +1,32 @@
+name: video_duration_native
+description: Lightweight native duration reader (Android/iOS) by path or content URI. No FFmpeg, no byte loading.
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ^3.9.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        default_package: video_duration_native_android
+      ios:
+        default_package: video_duration_native_ios
+
+dependencies:
+  flutter:
+    sdk: flutter
+  video_duration_native_android:
+    path: ../video_duration_native_android
+  video_duration_native_ios:
+    path: ../video_duration_native_ios
+  video_duration_native_platform_interface:
+    path: ../video_duration_native_platform_interface
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.4
+  plugin_platform_interface: ^2.1.8
+  very_good_analysis: ^10.0.0

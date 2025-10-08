@@ -1,0 +1,16 @@
+name: check_duration
+description: A Fluttium action to check video duration display
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  fluttium: ^0.1.0
+
+dev_dependencies:
+  mocktail: ^1.0.0
+  test: ^1.24.0
+  very_good_analysis: ^6.0.0
+
