@@ -7,7 +7,7 @@ issue_tracker: https://github.com/Ddarkbooked/video_duration_native/issues
 
 environment:
   sdk: ^3.9.0
-  flutter: ">=1.10.0"
+  flutter: ">=1.20.0"
 
 flutter:
   plugin:
