@@ -14,7 +14,7 @@ flutter:
     implements: video_duration_native
     platforms:
       android:
-        package: com.github.ddarkbooked.video_duration_native
+        package: com.example.verygoodcore
         pluginClass: VideoDurationNativePlugin
         dartPluginClass: VideoDurationNativeAndroid
 
