@@ -22,4 +22,5 @@ jobs:
     with:
       flutter_version: 3.35.0
       working_directory: video_duration_native_platform_interface
+      min_coverage: 85
 
