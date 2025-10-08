@@ -19,18 +19,21 @@ void main() {
     'VideoDurationNativePlatform has default '
     'MethodChannelVideoDurationNative instance',
     () {
+      // Test the static instance getter to ensure it's properly initialized
+      final instance = VideoDurationNativePlatform.instance;
+      expect(instance, isA<VideoDurationNativePlatform>());
+
       // Create a new MethodChannelVideoDurationNative instance to ensure
       // the static initialization is covered
       final methodChannelInstance = MethodChannelVideoDurationNative();
+      expect(methodChannelInstance, isA<MethodChannelVideoDurationNative>());
 
-      // Test that we can access the static instance
+      // Test setting the instance to ensure the setter is covered
+      VideoDurationNativePlatform.instance = methodChannelInstance;
       expect(
         VideoDurationNativePlatform.instance,
-        isA<VideoDurationNativePlatform>(),
+        equals(methodChannelInstance),
       );
-
-      // Also verify the method channel instance is created successfully
-      expect(methodChannelInstance, isA<MethodChannelVideoDurationNative>());
     },
   );
 

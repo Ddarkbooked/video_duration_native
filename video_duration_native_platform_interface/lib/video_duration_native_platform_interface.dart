@@ -18,8 +18,11 @@ abstract class VideoDurationNativePlatform extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static VideoDurationNativePlatform _instance =
-      MethodChannelVideoDurationNative();
+  static VideoDurationNativePlatform _instance = _createDefaultInstance();
+
+  static VideoDurationNativePlatform _createDefaultInstance() {
+    return MethodChannelVideoDurationNative();
+  }
 
   /// The default instance of [VideoDurationNativePlatform] to use.
   ///
