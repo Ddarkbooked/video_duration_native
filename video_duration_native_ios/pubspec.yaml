@@ -20,7 +20,7 @@ flutter:
 dependencies:
   flutter:
     sdk: flutter
-  video_duration_native_platform_interface: ^0.2.0+3
+  video_duration_native_platform_interface: ^0.2.0+2
 
 dev_dependencies:
   flutter_test:

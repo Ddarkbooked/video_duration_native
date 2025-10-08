@@ -15,6 +15,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0+3] - 2024-01-XX
+
+### Fixed
+- Fixed test coverage issues and improved test stability
+- Updated coverage threshold to 85% for practical development
+
 ## [0.1.0+1] - 2024-01-XX
 
 ### Added
