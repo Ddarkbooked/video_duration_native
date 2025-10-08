@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1](https://github.com/Ddarkbooked/video_duration_native/compare/video_duration_native_android-v0.2.0...video_duration_native_android-v0.2.1) (2025-10-08)
+
+
+### Bug Fixes
+
+* update CHANGELOG and improve test coverage ([0316fff](https://github.com/Ddarkbooked/video_duration_native/commit/0316fff4e58f854c1f8a4a1c8b7227932c882599))
+
 ## [0.2.0](https://github.com/Ddarkbooked/video_duration_native/compare/video_duration_native_android-v0.1.0...video_duration_native_android-v0.2.0) (2025-10-08)
 
 
