@@ -1,7 +1,9 @@
 name: video_duration_native_android
 description: Android implementation of the video_duration_native plugin
 version: 0.1.0+1
-publish_to: none
+homepage: https://github.com/Ddarkbooked/video_duration_native
+repository: https://github.com/Ddarkbooked/video_duration_native
+issue_tracker: https://github.com/Ddarkbooked/video_duration_native/issues
 
 environment:
   sdk: ^3.9.0
@@ -11,15 +13,14 @@ flutter:
     implements: video_duration_native
     platforms:
       android:
-        package: com.example.verygoodcore
+        package: com.github.ddarkbooked.video_duration_native
         pluginClass: VideoDurationNativePlugin
         dartPluginClass: VideoDurationNativeAndroid
 
 dependencies:
   flutter:
     sdk: flutter
-  video_duration_native_platform_interface:
-    path: ../video_duration_native_platform_interface
+  video_duration_native_platform_interface: ^0.1.0
 
 dev_dependencies:
   flutter_test:
