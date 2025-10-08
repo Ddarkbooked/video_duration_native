@@ -15,11 +15,12 @@ class VideoDurationNativeMock extends VideoDurationNativePlatform {
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  
+
   // Test default instance initialization first (before any setUp interference)
   group('VideoDurationNativePlatform default initialization', () {
     test('has default MethodChannelVideoDurationNative instance', () {
-      // This test runs before setUp, so it tests the actual default initialization
+      // This test runs before setUp, so it tests
+      // the actual default initialization
       expect(
         VideoDurationNativePlatform.instance,
         isA<MethodChannelVideoDurationNative>(),
