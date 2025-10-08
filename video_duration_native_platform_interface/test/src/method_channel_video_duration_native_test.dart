@@ -14,19 +14,19 @@ void main() {
       methodChannelVideoDurationNative = MethodChannelVideoDurationNative();
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
           .setMockMethodCallHandler(
-        methodChannelVideoDurationNative.methodChannel,
-        (methodCall) async {
-          log.add(methodCall);
-          switch (methodCall.method) {
-            case 'getPlatformName':
-              return kPlatformName;
-            case 'getDuration':
-              return 5000; // 5 seconds in milliseconds
-            default:
-              return null;
-          }
-        },
-      );
+            methodChannelVideoDurationNative.methodChannel,
+            (methodCall) async {
+              log.add(methodCall);
+              switch (methodCall.method) {
+                case 'getPlatformName':
+                  return kPlatformName;
+                case 'getDuration':
+                  return 5000; // 5 seconds in milliseconds
+                default:
+                  return null;
+              }
+            },
+          );
     });
 
     tearDown(log.clear);
@@ -44,9 +44,10 @@ void main() {
     group('getDuration', () {
       test('returns duration when path is valid', () async {
         const testPath = '/path/to/video.mp4';
-        final duration = await methodChannelVideoDurationNative
-            .getDuration(testPath);
-        
+        final duration = await methodChannelVideoDurationNative.getDuration(
+          testPath,
+        );
+
         expect(
           log,
           <Matcher>[
@@ -59,33 +60,39 @@ void main() {
       test('returns zero duration when result is null', () async {
         TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
             .setMockMethodCallHandler(
-          methodChannelVideoDurationNative.methodChannel,
-          (methodCall) async => null,
-        );
+              methodChannelVideoDurationNative.methodChannel,
+              (methodCall) async => null,
+            );
 
-        final duration = await methodChannelVideoDurationNative.getDuration('/test.mp4');
+        final duration = await methodChannelVideoDurationNative.getDuration(
+          '/test.mp4',
+        );
         expect(duration, equals(Duration.zero));
       });
 
       test('returns zero duration when result is negative', () async {
         TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
             .setMockMethodCallHandler(
-          methodChannelVideoDurationNative.methodChannel,
-          (methodCall) async => -1000,
-        );
+              methodChannelVideoDurationNative.methodChannel,
+              (methodCall) async => -1000,
+            );
 
-        final duration = await methodChannelVideoDurationNative.getDuration('/test.mp4');
+        final duration = await methodChannelVideoDurationNative.getDuration(
+          '/test.mp4',
+        );
         expect(duration, equals(Duration.zero));
       });
 
       test('returns zero duration on exception', () async {
         TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
             .setMockMethodCallHandler(
-          methodChannelVideoDurationNative.methodChannel,
-          (methodCall) async => throw PlatformException(code: 'error'),
-        );
+              methodChannelVideoDurationNative.methodChannel,
+              (methodCall) async => throw PlatformException(code: 'error'),
+            );
 
-        final duration = await methodChannelVideoDurationNative.getDuration('/test.mp4');
+        final duration = await methodChannelVideoDurationNative.getDuration(
+          '/test.mp4',
+        );
         expect(duration, equals(Duration.zero));
       });
     });
