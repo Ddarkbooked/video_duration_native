@@ -17,10 +17,10 @@ void main() {
     test('has default MethodChannelVideoDurationNative instance', () {
       // Create a concrete instance to test the platform interface
       final platform = TestVideoDurationNativePlatform();
-      
+
       // Verify the instance is created successfully
       expect(platform, isA<VideoDurationNativePlatform>());
-      
+
       // Test that we can access the static instance
       expect(
         VideoDurationNativePlatform.instance,
@@ -32,7 +32,7 @@ void main() {
       // Test setting and getting the static instance
       final testPlatform = TestVideoDurationNativePlatform();
       VideoDurationNativePlatform.instance = testPlatform;
-      
+
       expect(
         VideoDurationNativePlatform.instance,
         equals(testPlatform),
